@@ -1,0 +1,155 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Do you want to logout?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary signout">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+    <nav class="navbar navbar-light bg-warning" id="nav">
+        <a class="navbar-brand rounded-pill" href="/">
+            <img src="https://st2.depositphotos.com/8301258/11963/v/950/depositphotos_119634124-stock-illustration-restaurant-logo-cutlery-design.jpg"
+                width="80" height="80" alt="" id="logo">FLAVOR
+        </a>
+        <div id="navbar">
+            <ul class="nav">
+                <li class="nav-item">
+    <a class="nav-link rounded-pill" href="/">HOME</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link rounded-pill" href="/about">ABOUT</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link rounded-pill" href="#">CONTACT</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link rounded-pill" href="#">CART</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link rounded-pill" href="#exampleModal" data-toggle="modal" >SIGNOUT</a>
+  </li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<!---TABLE-MATRIX BLOCK START-->
+<div class="container mb-4">
+    <div class="d-flex justify-content-center align-items-center mt-4">
+        <div class="lead mb-4">TABLE-MATRIX</div>
+        </div>
+        <div class="arrows"><img class="leftarrow" src="https://img.icons8.com/carbon-copy/100/000000/arrow-pointing-left.png">
+         <img class="rightarrow" src="https://img.icons8.com/carbon-copy/100/000000/arrow.png">
+         </div> <div class="border border-secondary   matrix mx-auto mt-4">
+     <div class="flex-container py-2">
+              <div class="row flex-wrapper px-5 my-3">
+          {{#each data1}}
+            
+          <div class="col mx-3 text-center flex-item" {{#if this.reserved}}style="background-color:rgb(247, 136, 136); color:white"{{/if}} >Tab-{{this.tableId}}</div>
+          {{/each}}
+      </div>
+      <div class="row flex-wrapper px-5 my-3">
+          {{#each data2}}
+          <div class="col mx-3 text-center flex-item" {{#if this.reserved}}style="background-color:rgb(247, 136, 136); color:white"{{/if}} >Tab-{{this.tableId}}</div>
+         {{/each}}
+          </div>
+      <div class="row flex-wrapper px-5 my-3">
+          {{#each data3}}
+          <div class="col mx-3 text-center flex-item" {{#if this.reserved}}style="background-color:rgb(247, 136, 136); color:white"{{/if}}>Tab-{{this.tableId}}</div>
+          {{/each}}
+      
+      </div>
+      <div class="row flex-wrapper px-5 my-3">
+          {{#each data4}}
+          <div class="col mx-3 text-center flex-item" {{#if this.reserved}}style="background-color:rgb(247, 136, 136); color:white"{{/if}}>Tab-{{this.tableId}}</div>
+          {{/each}}
+      </div>    
+              <div class="row flex-wrapper px-5 my-3">
+          {{#each data5}}
+          <div class="col mx-3 text-center flex-item" {{#if this.reserved}}style="background-color:rgb(247, 136, 136); color:white"{{/if}}>Tab-{{this.tableId}}</div>
+          {{/each}}
+          </div> 
+    </div>
+
+       
+        </div>
+      
+</div>
+<!--TABLE-MATRIX BLOCK END-->
+<!--PAYMENT-GATEWAY AND PREORDER OPTIONS-->
+<small class="d-flex justify-content-center message"></small>
+<section class="bookingcard"> 
+     <form action="/create/booking" method="POST" class="form-group">
+  <input type="text" name="Customer_name" value="{{username}}" class="form-control w-100 mt-2" readonly="readonly">
+  <input type="text" name="Table_number" class="form-control mt-2 w-100" readonly="readonly">
+  <input type="hidden" name="Status"  value="Booked"class="form-control mt-2">
+  <input type="submit" class="btn btn-primary mt-2" style="background-color: #113D6C;" value="Submit">
+  <input type="button" class="btn btn-primary mt-2" style="background-color: #FCE181; border-color:black;" value="Prepaid">
+  </form>
+</section>
+
+<div class="mini-container mb-1 mt-5">
+<button class="btn btn-outline-secondary w-25">
+    Pay
+</button>
+<button class="btn btn-dark w-25">
+    Pre-order
+</button>
+</div>
+
+<!--PAYMENT-GATEWAY AND PREORDER OPTIONS END-->
+
+<!--PAYMENT-GATEWAY AND PREORDER OPTIONS-->
+<div id="footer">
+    <div id="footer-block1">
+        <span>
+            <a class="navbar-brand" href="#">
+                <img src="https://st2.depositphotos.com/8301258/11963/v/950/depositphotos_119634124-stock-illustration-restaurant-logo-cutlery-design.jpg"
+                    width="80" height="80" alt="" id="logo">FLAVOURS
+            </a>
+        </span><br><br>
+        <span>
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </span>
+    </div>
+    <div id="footer-block2">
+        <span>
+            <h5>Important Links</h5>
+        </span>
+        <span><a href="#">BLog</a></span><br>
+        <span><a href="#">Shop Partners</a></span><br>
+        <span><a href="#">Privacy Policy</a></span><br>
+        <span><a href="#">Terms & Condition</a></span><br>
+    </div>
+
+    <div id="footer-block3">
+        <span>
+            <h5>Contact Us</h5>
+        </span>
+        <span>
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </span>
+    </div>
+</div>

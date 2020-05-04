@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+#nav {
+    height: 70px;
+    font-family: 'Fjalla One', sans-serif !important;
+    box-shadow: 1px 1px 1px 1px #101f2b4d;
+    
+}
+
+#logo {
+    margin: 0px 10px 0px 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.background-image {
+    width: 1080px;
+
+}
+
+a { font-weight: 500;
+    color: #FFFFFF !important;
+    margin-right: 22px !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+}
+
+a:hover {
+    background-color:  #FFFFFF !important;
+    color:  #fcb00bfd !important;
+}
+
+#footer {
+    background-color: #fcb00bfd;
+    height: 350px;
+    padding: 10px 20px 20px 20px;
+    color: white;
+    position: relative;
+}
+
+#footer-block1 {
+    display: inline-block;
+    width: 40%;
+    margin: 10px 20px 10px 10px;
+}
+
+#footer-block2 {
+    display: inline-block;
+    width: 20%;
+    margin: 10px 20px 0px 20px;
+}
+
+#footer-block3 {
+    display: inline-block;
+    width: 30%;
+    margin: 15px 20px 0px 20px;
+}
+
+.lead{
+    
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.matrix{
+    width: 1000px;
+    height: 800px;
+    background-color: #e6e9ec33;
+    border-radius: 16%;
+}
+.col{
+    width: 100px !important;
+    height: 100px;
+    background-color: #dec19f70;
+    
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+
+}
+.flex-item{
+    padding-top: 35px; 
+ border-radius: 10%;
+ box-shadow: 1px 1px 0px 1px rgba(17, 61, 108, 0.26);
+ 
+}
+.flex-item:hover{
+    background-color: #FCE181;
+    box-shadow: 2px 3px 0px 1px rgba(17, 61, 108, 0.26);
+
+
+}
+.arrows{
+    display: flex;
+    justify-content: center;
+}
+.leftarrow:hover{
+    border:1px solid black;
+    background-color: #FCE181;
+}
+.rightarrow:hover{
+    border:1px solid black;
+    background-color: #FCE181;
+}
+.mini-container{
+    display: flex;
+    justify-content: center;
+    
+}
+.btn-outline-secondary:hover{
+    background-color: #113D6C !important;
+}
+.btn-dark{
+    position: relative;
+    right: 1px;
+    background-color: #FCE181 !important;
+    
+}
+
+.jumbotron{
+    
+    box-shadow: 0.3px 0.3px 0px 0.5px #101f2b91;
+    margin-top: 30px;
+    width: 500px !important;
+    height: 500px  !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+input{
+    width: 350px !important;
+}

@@ -1,0 +1,130 @@
+<div>
+    <nav class="navbar navbar-light bg-warning" id="nav">
+        <a class="navbar-brand" href="/">
+            <img src="https://st2.depositphotos.com/8301258/11963/v/950/depositphotos_119634124-stock-illustration-restaurant-logo-cutlery-design.jpg"
+                width="80" height="80" alt="" id="logo">FlAVOR
+        </a>
+        <div id="navbar">
+            <ul class="nav">
+                <li class="nav-item">
+    <a class="nav-link rounded-pill" href="/">HOME</a>
+  </li>
+  <li class="nav-item ">
+    <a class="nav-link rounded-pill" href="/about">ABOUT</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link rounded-pill" href="#">CONTACT</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link rounded-pill" href="/ADMIN_ACCESS">ADMIN</a>
+  </li>
+    </ul>
+        </div>
+
+    </nav>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-6">
+          <div class="jumbotron bg-light border" style="">
+               {{#if flag}}
+          <div class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Sorry!</h4>
+  {{#each signup_messages}}
+  <p>{{this}}</p>
+  {{/each}}
+  <hr>
+  <p class="mb-0">Huh! try again.</p>
+</div>
+    {{else}} <div class="h4">Register</div>{{/if}}
+              <form  class="form-group mt-3" action="/signup" method="POST">
+                  <label for="Username" class="text-secondary">Username</label>
+                  <input type="text" class="form-control mb-2"
+                  name="username">
+                  <label for="Email" class="text-secondary">Mail Id</label>
+                  <input type="text" class="form-control mb-2"
+                  name="email">
+                  <label for="Password" class="text-secondary">Password (6 or more characters)</label>
+                  <input type="password" class="form-control mb-2"
+                  name="password">
+                  <label for="Confirm_Password" class="text-secondary">Confirm Password</label>
+                  <input type="password" class="form-control mb-2"
+                  name="confirmpassword">
+                  <small class="text-secondary">By clicking Join now, you agree to Flavor's <b>User Agreement Privacy Policy and Cookie Policy.</b></small>
+                  <input type="submit" value="Join now" class="form-control text-light mt-4" style="background-color:#fcb00bfd;">
+                 <p class="lead text-center mt-3">Already on Flavor? <span class="text-primary">Login</span></p>
+              </form>
+          </div>
+               
+        </div>
+        <div class="col-6">
+         <div class="jumbotron bg-light border" style="">
+              {{#if error}}
+              <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Sorry!</h4>
+                   {{#each signin_messages}}
+                   <p>{{this}}</p>
+                       {{/each}}
+                        <hr>
+                      <p class="mb-0">So, busy.</p>
+                </div>    
+              {{else}}<div class="h4">Login</div>
+              {{/if}}
+              <form  class="form-group mt-3" action="/login" method="POST">
+                  <label for="Username" class="text-secondary">Username</label>
+                  <input type="text" class="form-control mb-2"
+                  name="username">
+                  <label for="Email" class="text-secondary">Mail Id</label>
+                  <input type="text" class="form-control mb-2"
+                  name="email">
+                  <label for="Password" class="text-secondary">Password</label>
+                  <input type="password" class="form-control mb-2"
+                  name="password">
+                  <input style="background-color:#fcb00bfd ;" type="submit" value="Login" class="form-control text-light mt-4">
+              </form>
+          </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="footer-block1">
+        <span>
+            <a class="navbar-brand" href="#">
+                <img src="https://st2.depositphotos.com/8301258/11963/v/950/depositphotos_119634124-stock-illustration-restaurant-logo-cutlery-design.jpg"
+                    width="80" height="80" alt="" id="logo">FLAVOURS
+            </a>
+        </span><br><br>
+        <span>
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </span>
+    </div>
+    <div id="footer-block2">
+        <span>
+            <h5>Important Links</h5>
+        </span>
+        <span><a href="#">BLog</a></span><br>
+        <span><a href="#">Shop Partners</a></span><br>
+        <span><a href="#">Privacy Policy</a></span><br>
+        <span><a href="#">Terms & Condition</a></span><br>
+    </div>
+
+    <div id="footer-block3">
+        <span>
+            <h5>Contact Us</h5>
+        </span>
+        <span>
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </span>
+    </div>
+</div>

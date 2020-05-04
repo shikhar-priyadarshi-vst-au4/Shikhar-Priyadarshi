@@ -1,0 +1,277 @@
+<div class="mt-1 container-fluid row">
+<!--<span class="hamburger bg-light border border-light rounded-lg">
+       <span class="border border-dark "></span>
+       <span class="border border-dark  mt-2"></span>
+       <span class="border border-dark  mt-2"></span>
+   </span>-->
+
+<div class=" col-2 border rounded-lg sidebar d-flex flex-column">
+   <div class="sidebar-list ml-3">
+       <div class="sidebar-items py-4" id="dashboard"><span class='click'>Dashboard</span></div>
+     <div class="sidebar-items py-4" id="createorder"><span class='click'>Create Order</span></div>
+      <div class="sidebar-items py-4" id="reservations"><span class='click'>Reservations</span></div>
+       <div class="sidebar-items py-4" id="menu"><span class='click'>Cuisine</span></div>
+        <div class="sidebar-items py-4" id="inventory"><span class='click'>Inventory</span></div>
+        <div class="sidebar-items py-4" id="logout"><span class="click signout">Logout</span></div>
+        
+   </div>
+   
+   
+</div>
+<div class=" col-9 border dash dashboard-elem pt-2">
+<div class="d-flex justify-content-center main dashboard-elem text-secondary bg-light border py-4 rounded-pill">
+    <div class="px-3 dashboard-elem mr-4">Total orders
+        <div class="text-center dashboard-elem ">{{order}}</div>
+    </div>
+<div class="px-5 border-right dashboard-elem border-left border-warning">No. of bookings
+    <div class="text-center dashboard-elem ">{{number}}</div>
+</div>
+<div class="px-5 border-right border-warning dashboard-elem ">Login
+    <div class="text-center dashboard-elem ">{{users}}</div>
+</div>
+<div class="px-5 border-right border-warning dashboard-elem ">Vacant Tables
+    <div class="text-center dashboard-elem ">{{vacant}}</div>
+</div>
+<div class=" ml-4 px-4 text-center dashboard-elem ">Servers
+  <div class="d-flex dashboard-elem ">
+    <div class="pr-2 dashboard-elem ">Busy
+        <div class="text-danger dashboard-elem ">0</div>
+      </div>
+       <div class="border-left border-warning pl-2 dashboard-elem ">Active
+          <div class="text-success dashboard-elem ">0</div>
+      </div>
+    </div>
+   </div>
+  </div>
+  <div class="row mt-2 dashboard-elem container-fluid">
+      <div class="col-6 list-1  w-100 dashboard-elem " aria-placeholder="Chart">
+         <div class="row chart m-5 dashboard-elem ">
+          <canvas id="myChart" class=" mb-3" width="300" height="400"></canvas>
+         </div>
+         
+      </div>
+      <div class="col-6 list border-left employpee dashboard-elem  w-100">
+       <table class="table mt-3 table-hover dashboard-elem ">
+           <thead class="thead-secondary dashboard-elem ">
+               <th>Name</th>
+               <th>Position</th>
+               <th>Status</th>
+           </thead>
+         <tbody>
+             <tr>
+           <td>Manager_name</td>
+           <td>Manager</td>
+           <td><h5><a class="badge badge-success" href="#">Online</a></h5></td>
+       </tr>
+       <tr>
+           <td>Execuitve_chef_name</td>
+           <td>Executive Chef</td>
+           <td> <h5><a class="badge badge-success" href="#">Online</a></h5>
+               </td>
+       </tr>
+       <tr>
+           <td>Sous_chef_name</td>
+           <td>Sous chef</td>
+           <td><h5><a class="badge badge-success" href="#">Online</a></h5></td>
+       </tr>
+         <tr>
+             <td>Dishwasher_name</td>
+             <td>Dishwasher</td>
+             <td><h5><a class="badge badge-success" href="#" >Online</a></h5></td>
+         </tr>
+         <tr>
+             <td>Server1_name</td>
+             <td>Server</td>
+             <td><h5><a class="badge badge-success" href="#">Online</a></h5></td>
+         </tr>
+         <tr>
+             <td>Server2_name</td>
+             <td>Server</td>
+             <td><h5><a class="badge badge-success" href="#">Online</a></h5></td>
+         </tr>
+         <tr>
+             <td>Server3_name</td>
+             <td>Server</td>
+             <td><h5><a class="badge badge-success" href="#">Online</a></h5></td>
+         </tr>
+         <tr>
+             <td>Bartender_name</td>
+             <td>Bartender</td>
+             <td><h5><a class="badge badge-success" href="#">Online</a></h5></td>
+         </tr>
+         </tbody>
+       
+       </table>
+       </div>
+  </div>
+  <div class="row container-fluid mt-5 dashboard-elem">
+      <div class="col-12 text-center">
+        <table class="table w-100 table-bordered dashboard-elem">
+           <thead class="thead-secondary dashboard-elem ">
+               <th>Name</th>
+               <th>Feedback</th>
+               <th>Rating</th>
+           </thead>
+           <tbody>
+               {{#each feedback}}
+               <tr>
+                   <td>{{this.username}}</td>
+                   <td>{{this.feedback}} </td>
+                   <td class="{{#if this.star}}text-success{{else}}text-danger{{/if}}">
+                       {{#if this.star}}{{this.star}}{{else}}0{{/if}}/6</td>
+               </tr>
+               {{/each}}
+               </tbody>
+           </table>
+      </div>
+  </div>
+        
+  </div>
+  <div class=" col-9 createorder-elem container-fluid">
+      <div class="row">
+          <div class="col-5">
+               <div class="h5 ml-3 text-secondary">Customer Order Details</div>
+              <div style="overflow-y: scroll;">
+              <table class="table ml-3 table-bordered">
+                  <thead>
+                   <th class="lead text-center border-left border-right">OrderId</th>
+                   <th class="lead text-center border-right">Name</th>
+                   <th class="lead text-center border-right">Status</th>
+                    <th class="lead text-center  border-right">Table</th>
+                  </thead>
+                  <tbody>
+                     {{#each records}}
+                     <tr>
+                         <td>{{this.orderId}}</td>
+                         <td>{{this.username}}</td>
+                         <td>{{#if this.paymentStatus}}{{this.paymentStatus}}{{else}}Unpaid<b class="text-danger font-italic"> (Transc. Failed)</b>{{/if}}</td>
+                         <td>{{this.bookingtable}}</td>
+                         
+                     </tr>
+                     {{/each}}
+                     
+                  </tbody>
+              </table>
+              </div>
+          </div>
+          
+          
+          
+          
+          <div class="col-4  ml-4">
+              <div class="w-100 container-fluid mx-5">
+                  <div class="h5 ml-3 text-secondary">Create Order</div>
+                  <form action="/create/order" method="POST" class="form-group w-100">
+                      <label for="order_id" class="ml-3 lead">Order Id</label>
+                      <input type="text" class="form-control mx-3 order_id" name="order_id"  required>
+                      <label for="customer_name" class="ml-3 lead">Name</label>
+                      <input type="text" class="form-control mx-3" pattern="[a-zA-z].{2,}"
+                       title="Must be atleast 3 characters" name="customer_name" required>
+                      <label for="contact_no" class="ml-3 lead">Contact</label>
+                      <input type="text" class="form-control mx-3" pattern="[0-9]{10}" 
+                       title="10-digit number" name="contact_no">
+                      <label for="table_no" class="ml-3 lead">Table</label>
+                      <input type="text" class="form-control mx-3" name="table_no"  required>
+                      <label for="order_stack" class="ml-3 lead">Food</label>
+                      <select name="order_stack" id="" style="width: 120%;" class=" border-secondary form-control mx-3">
+                          {{#each products}}
+                          <option>{{this.title}}{{this.price}}</option>
+                          {{/each}}
+                      </select>
+                      <input type="submit" class=" btn text-light btn-warning ml-3 mt-3" value="Generate Ticket">
+                  </form>
+              </div>
+              
+
+          </div>
+      </div>
+      <div class="row container-fluid ml-1 mt-3">
+         <div class="col-12 border border-secondary">
+            <div class=" text-center my-4 display-4">Vacant Tables</div>
+         </div>
+         <div class="col-12 border border-secondary bg-light">
+          <div class="d-flex flex-wrap">
+              {{#each matrix}}
+              <div class="p-3 m-3 border border-secondary rounded" {{#if this.reserved}}style="background-color:rgb(247, 136, 136); color:white"{{/if}}
+              >Tab-{{this.tableId}}</div>
+              {{/each}}
+              
+          </div>
+         </div>
+         <div class="col-12">
+             <div class="display-4 text-center mt-3 border border-secondary text-secondary">Server Availability</div>
+             <div class="col-12 border border-secondary rounded bg-light">
+             <div class="d-flex flex-wrap">
+             <div class="p-4 m-3 border border-dark rounded-circle">1</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">2</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">3</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">4</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">5</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">6</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">7</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">8</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">9</div>
+             <div class="p-4 m-3 border border-dark rounded-circle">10</div>
+             </div>
+             </div> 
+         </div> 
+      </div>
+   </div>
+   <div class="grid_container mean">
+   <div class="reservation item1">
+       <div class="booking_table">
+        <table class="table_table">
+            <thead class="table_head">
+                <th class="table_head_item">Name</th>
+                <th class="table_head_item">Contact</th>
+                <th class="table_head_item_Table">Table</th>
+                <th class="table_head_item">Action</th>
+            </thead>
+            <tbody class="table_body">
+                    {{#each data}}
+                    <tr>
+                    <td class="table_body_item">{{this.username}}</td>
+                    <td class="table_body_item">N/A</td>
+                    <td class="table_body_item_Table">{{this.tableNumber}}</td>
+                    <td class="table_body_item"><a  href="#" class="del">Delete</a></td>
+                    </tr>
+                    {{/each}}
+            </tbody>
+        </table>
+     </div>
+     <div class="form">
+         <form action="/admin_bookingticket" method="POST" class="flex-form">
+             <div class="display-4 ">Create Ticket</div>
+             <label for="Table_number" class="label mt-1">Table</label>
+             <input type="text" name="Table_number">
+             <label for="Customer_name" class="label">Name</label>
+             <input type="text" name="Customer_name">
+             <label for="Contact_no" class="label">Status</label>
+             <input type="text" name="Contact_no">
+             <input type="Submit" value="Create Ticket">
+         </form>
+      </div>
+      </div>
+      <div class="table-matrix mt-4">
+      <form action="/tablematrix/update" method="POST">
+      <div class="flex-item display-4">Table Indices</div>
+      <label for="Matrix_unit" class="flex-item mt-2">Matrix Unit</label>
+      <input type="text" name="Matrix_unit" class="flex-item">
+       <label for="indices_value" class="flex-item">Indices</label>
+      <input type="text" name="indices_value" class="flex-item">
+       <input type="submit" value="Submit">
+      </form>
+      </div>
+      <div class="table-matrix mt-4">
+           <form action="/table/indices" method="POST">
+           <div class="flex-item display-4">Switch Indices</div>
+           <label for="Table_indices" class="flex-item mt-2">Indices</label>
+           <input type="text" class="flex-item" name="Table_indices">
+           <input type="submit" value="Submit">
+           </form>
+      </div>
+      </div>
+   
+</div>
+
+

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(Homepage-BackgroundIMG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#dropdownMenuButton{
+    width: 200px;
+}
+
+.display-3{
+    padding-left: 200px;
+}
+
+#managers{
+    padding-left: 60px;
+}
+
+.dropdown{
+    padding-left: 55px;
+}
+
+.form-group{
+    padding-left: 55px;
+}
+
+#submit{
+    padding-left: 55px;
+}

@@ -1,0 +1,52 @@
+pattern=[a-zA-Z]{10};
+pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" booking.countDocuments({},(error,count)=>{
+        if(error){
+            console.log("error");
+        }
+        else{
+            console.log(typeof count)
+            counter=count;
+            vacantTab=20-counter;
+        }
+        console.log("Step3");
+    })).then(
+        booking.find({},(error,result)=>{
+    
+            if(error){
+                return callbackfn({
+                    status:false,
+                    message:error
+                });
+            }
+            else{
+                console.log("Step4");
+                result.forEach((item,index)=>{
+                    console.log("Vacant=>"+vacant);   
+                    vacant[Number(item.tableNumber.substring(
+                        item.tableNumber.indexOf('-')+1))-1].reserved=true;
+                })
+                console.log(vacant);
+                console.log("Counter=="+counter);      
+                console.log("no.of bookings==>"+counter);
+                return callbackfn(null,{
+                    status:true,
+                    message:result,
+                    matrix:vacant,
+                    counter:counter,
+                    vacant:vacantTab
+                })
+            }
+        })
+    )}
+{{#each data}}
+mongodb+srv://Shikhar4223:qwerty21QA@cluster0-yo1gt.mongodb.net/restaurant_booking?retryWrites=true&w=majority'
+
+data[0].datum[0]
+data[0].datum[1]
+data[0].datum[2]
+data[0].datum[3]
+
+{data:[datum:[{data1:xxx},{data2:yyy},{data3:zzz},{data4:qqq}]],[{}],[{}],[{}],[{}]}
+
+mongodb+srv://Shikhar4223:cXdlcnR5MjFRQQ==@cluster0-yo1gt.mongodb.net/test?retryWrites=true&w=majority
+cXdlcnR5MjFRQQ==
