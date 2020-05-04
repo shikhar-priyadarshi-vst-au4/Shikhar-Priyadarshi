@@ -1,0 +1,43 @@
+{{#if products}}
+<div class="d-flex  flex-column mt-3 mx-auto rounded-pill border w-75 border-secondary">
+    <div class="row d-flex  my-3 justify-content-center">  
+        <div class="col-8">
+      <ul class="list-group mt-2">
+          {{#each products}}
+            <li class="list-group-item border-dark text-secondary bg-light">
+              <span class="badge badge-secondary">{{this.qty}}</span>
+                <strong class="text-bolder">{{this.item.title}}</strong>
+                  <span class="text-bold">Rs {{this.price}}</span>
+                     <div class="btn-group float-right">
+                     <button class="btn text-light btn-warning  dropdown-toggle"
+                   type="button">Action <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                  <li><a href="#">remove</a></li>
+                 <li><a href="#">remove all</a></li>
+                </ul>
+             </div>
+        </li>
+          {{/each}}
+        
+       </ul>
+    </div>
+   </div>
+
+<div class="row d-flex mb-3 justify-content-center">
+    <div class="col-8">
+      <span class="display-4 text-secondary">Total :{{this.totalPrice }}</span>      
+    </div>
+</div>
+<div class="row d-flex justify-content-center ">
+    <div class="col-8 ">
+      <a class="btn btn-warning text-light px-5 mb-2" href="/paymentgate/paytm/request">Checkout</a>     
+    </div>
+</div>
+{{else}}
+<div class="row">
+    <div class="col-6 ">
+      <h2>No Items in Cart</h2>    
+    </div>
+</div>
+{{/if}}
+</div>

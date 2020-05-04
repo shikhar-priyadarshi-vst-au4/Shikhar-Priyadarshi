@@ -1,0 +1,23 @@
+ <form method="POST" action="https://securegw-stage.paytm.in/order/process" name="paytm">
+         <table border="1">
+            <tbody>
+                <input type="hidden" name="MID" value="{{this.MID}}">
+               <input type="hidden" name="WEBSITE" value="{{this.WEBSITE}}">
+               <input type="hidden" name="ORDER_ID" value="{{this.ORDER_ID}}">
+               <input type="hidden" name="CUST_ID" value="{{this.CUST_ID}}">
+               
+               
+               <input type="hidden" name="INDUSTRY_TYPE_ID" value="{{this.INDUSTRY_TYPE_ID}}">
+               <input type="hidden" name="CHANNEL_ID" value="{{this.CHANNEL_ID}}">
+               <input type="hidden" name="TXN_AMOUNT" value="{{this.TXN_AMOUNT}}">
+               <input type="hidden" name="CALLBACK_URL" value="{{this.CALLBACK_URL}}">
+               <input type="hidden" name="CHECKSUMHASH" value="{{this.CHECKSUMHASH}}">
+               
+               </tbody>
+         </table>
+         <script type="text/javascript">
+            document.paytm.submit();
+         </script>
+      </form>
+
+

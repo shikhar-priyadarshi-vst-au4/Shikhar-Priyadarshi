@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+  font-family: 'Open Sans', sans-serif !important;
+    width: 100%;
+    height: 100%;
+}
+.sidebar{
+    left:0px;
+    height: 2000px;
+    background-color: #ffc107;
+    color:#FFFF;
+}
+.container-fluid{
+  padding-right: 0px !important;
+}
+.col-9 {
+  -ms-flex: 0 0 75% !important;
+  flex: 11 10 80% !important;
+  max-width: 278% !important;
+}
+.list-1, .list{
+    height: 500px;
+}
+.main{
+    box-shadow: 1px 1px 1px 1px #e2d1d17d;
+}
+
+#myChart{
+  height: 400px !important;
+}
+.click:hover{
+  padding: 10px;
+  background-color: gold;
+  border:1px solid;
+  border-radius:10%;
+  cursor: pointer;
+  font-size: 22px;
+  transition: all 0.2s linear;
+}
+.hamburger{
+  margin-left: 0% !important;
+ 
+height: fit-content;
+
+padding: 5px;
+}
+.hamburger span{
+  display: block;
+  width:40px;
+  
+}
+.booking_table{
+  padding: 10px;
+}
+.table_table{
+  box-shadow: 0.5px 1px 0.5px 0.5px #101f2b42;
+}
+.table_head{
+  
+  border: 0.5px solid #ffffff;
+}
+
+.table_head_item, .table_head_item_Table{
+  font-weight: 400; 
+  color: #000000a6;
+  background-color: #ffc107;
+}
+.table_head_item, .table_head_item_Table{
+  border: 0.5px solid #ffffff;
+  padding: 20px 20px 20px 20px;
+  color: #ffffff;
+  } 
+.table_body_item{
+  border: 0.5px solid #0000004f;
+  padding: 10px 20px 10px 20px;
+  
+}
+.table_body_item_Table, .table_head_item_Table{
+  text-align: center;
+}
+.table_body_item, .table_body_item_Table{
+  font-weight: 500;
+  height: 70px;
+}
+.table_body_item_Table{
+  border: 0.5px solid #0000004f;
+  padding: 5px 14px 5px 14px;
+}
+.del{
+  margin: 10px 5px 10px 5px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px 5px;
+  background-color: tomato;
+  font-size: 16px;
+  color: #FFFF !important;
+  border-color: tomato;
+  font-weight: 600;
+  box-shadow: -4px 0px 2px 1px #ffffff;
+}
+a:hover
+{ color: #FFFF !important;
+  text-decoration: none !important;
+  
+}
+.flex-form{
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+input[type="text"]{
+  border-radius: 2px;
+  border: 0.5px solid #101f2b78;
+  height: 40px;
+  width: 400px;
+  box-shadow: none;
+  
+}
+input[type="Submit"]{
+  height: 50px;
+  border: 0px;
+  width: 200px;
+  margin-top:10px;
+  border-radius: 8px;
+  background-color: #ffc107;
+  color: #ffffff;
+}
+.reservation{
+  display: flex;
+  flex-direction: row;
+}
+.label{
+  color:#000000a6;
+  font-size: 20px;
+}
+.grid_container{
+  display: grid ;
+  grid-template-rows: 370px 370px ;
+}
+.item1{
+  grid-column: 1/2;
+}
+.item2{
+
+float: right;
+}
+.table_head_1_item{
+  text-align: center;
+  background-color: #ffc107;
+ border: 1px solid #ffffff;
+ padding: 10px;
+ color: #ffffff;
+ width:134px;
+}
+.table_body_1_item{
+  text-align: center;
+  border: 0.5px solid #0000004f;
+  padding: 20px;
+ 
+}
+.title{
+  font-size: 20px;
+  color: #101f2b;
+  font-weight: 400;
+  text-align:left;
+  margin-bottom: 2px;
+}
+.Cancelled{
+  margin: 10px;
+ width: 400px;
+ height: 300px;
+}
+.head{
+  width: 502px;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  background-color:#ffc107;
+  text-align: center;
+  color: #ffffff;
+}
+.body{
+  background-color:  #ffffff;
+  width: 502px;
+  height: 250px;
+  border: 0.5px solid #000000a6;
+}
+.ticket{
+  width: 213px;
+    height: 113px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+  border: 1px solid #000000a6;
+}
+.name{
+ width:50px;
+ height: 20px;
+ border: 1px solid #000000a6;
+ float: left;
+}
+.table_no{
+  width:50px;
+  height: 20px;
+  border: 1px solid #000000a6;
+  float: right;
+}
+.mail_id{
+  
+  width:50px;
+  height: 20px;
+  border: 1px solid #000000a6;
+  margin: 10px;
+}
+.table-matrix{
+  display:flex;
+  justify-content: flex-end;
+}
+.flex-item{
+  display: flex;
+  flex-direction: column;
+
+}

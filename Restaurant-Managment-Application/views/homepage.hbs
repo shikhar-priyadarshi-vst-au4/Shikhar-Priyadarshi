@@ -1,0 +1,127 @@
+<nav class="navbar  navbar-light bg-warning">
+            <a class="navbar-brand rounded-pill" href="#">
+                <img src="https://st2.depositphotos.com/8301258/11963/v/950/depositphotos_119634124-stock-illustration-restaurant-logo-cutlery-design.jpg"
+                    width="80" height="80" alt="" id="logo">FLAVOR
+            </a>
+            <div id="navbar">
+                <ul class="nav">
+                    <li class="nav-item rounded-pill">
+                        <a class="nav-link active rounded-pill" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active rounded-pill" href="/about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active rounded-pill" href="/menu">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active rounded-pill" href="/booking/details">BOOK</a>
+                    </li>
+                    <li class="nav-item dropdown" id="dropdown">
+                        {{#if login}}
+                        <a href="" class="dropdown-toggle  rounded-pill" data-toggle="dropdown">LOGOUT</a>
+                        {{else}}
+                        <a href="" class="dropdown-toggle rounded-pill" data-toggle="dropdown">LOGIN</a>
+                        {{/if}}
+                        <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item text-dark  admin" href="/ADMIN_ACCESS">Admin</a>
+                            {{#if login}}
+                            <a class="dropdown-item text-dark  logout" href="/logout">Logout</a>
+                            {{else}}
+                            <a class="dropdown-item  text-dark  login" href="/LOGIN_ACCESS">Login</a>
+                            {{/if}}
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active rounded-pill" href="/feedback">FEEDBACK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active rounded-pill" href="#">HELP</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    <div class="img-fix">
+       <div class="text-light image">
+           <div class="display-1">Food and more.</div>
+       </div>
+       <p class="text-bolder quote">
+           You learn a lot about someone when you share a meal together.
+           “ Laughter is brightest in the place where the food is.
+           </p>
+       <input type="submit" value="Explore" class="btn px-5 btn-light bg_img text-warning rounded-pill">
+       
+        
+    </div>
+
+    <div class="contain">
+        <div class="card_1">
+               <div class="item bg-dark">
+                   <p class="mt-1 text-light"><i class="fas fa-wine-glass-alt" style="font-size:3rem;"></i></p>
+                   <p  class="wine px-2" style="font-size: 0.8rem;">Top wine available at nominal price. Midnight offers and much more.</p>
+                   <p style="font-size: 0.6rem;">Subject to availability</p>
+               </div>
+        </div>
+        <div class="card_2">
+            <div class="item bg-dark">
+                 <p class="mt-1 text-light"><i  class="fas fa-utensils" style="font-size:3rem;"></i></p>
+                 <p class="wine px-2" style="font-size: 0.8rem;">Indian, Chinese & Continental. Rich nutrients and healthy.</p>  
+                 <p style="font-size: 0.6rem;">Powered by Flavor</p>
+            </div>
+        </div>
+        <div class="card_3">
+           <div class="item bg-dark">
+              <p class="mt-1 text-light"><i class="fas fa-ticket-alt" style="font-size:3rem;"></i></p>
+               <p class="wine px-2" style="font-size: 0.8rem;">Book now. Preorder. Get it on your device.
+                   Offer on prebook
+                   <p style="font-size: 0.6rem;">Pay using Paytm Wallet</p> 
+               </p>  
+                 
+           </div>
+        </div>
+    </div>
+    <div class="flasher">
+        <div>
+            Product flasher
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-block1">
+            <span>
+                <a class="navbar-brand" href="#">
+                    <img src="https://st2.depositphotos.com/8301258/11963/v/950/depositphotos_119634124-stock-illustration-restaurant-logo-cutlery-design.jpg"
+                        width="80" height="80" alt="" id="logo">FLAVOR
+                </a>
+            </span><br><br>
+            <span>
+                Acquaintances become friends around a table in the safe and controlled environment of a restaurant.
+                Individuals become lovers across a restaurant table, sometimes. Customer Satisfaction and Loyalty. One
+                of the main objectives of a restaurant is to ensure customer satisfaction and build a repeat-customer
+                base.
+            </span>
+        </div>
+        <div id="footer-block2">
+            <span>
+                <h5>Important Links</h5>
+            </span>
+            <span><a href>BLog</a></span><br>
+            <span><a href>Shop Partners</a></span><br>
+            <span><a href>Privacy Policy</a></span><br>
+            <span><a href>Terms & Condition</a></span><br>
+        </div>
+
+        <div id="footer-block3">
+            <span>
+                <h5>Contact Us</h5>
+            </span>
+            <span>
+                BHIVE Workspace, L-148, 5th Main Rd, Sector 6, HSR Layout, Bengaluru, Karnataka 560102
+            </span><br><br>
+            <span>
+                For enquery:
+                admin@flavours.com
+                8123986891 / 7052560736 / 8870438474
+            </span>
+        </div>
+    </div>

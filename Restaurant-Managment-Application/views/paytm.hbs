@@ -1,0 +1,17 @@
+<div class="jumbotron mx-auto">
+    <form action="/paymentgate/paytm/request" method="POST" class="form-group ">
+    <label for="ORDER_ID" class="mt-3">Order-Id:</label>
+<input type="text" id="ORDER_ID" name="ORDER_ID" value="{{session.cart.orderId}}" class="form-control  mt-1">
+<input type="hidden" class="form-control mt-3" id="INDUSTRY_TYPE_ID" name="INDUSTRY_TYPE_ID" value="Retail">
+<label for="ORDER_ID" class="mt-3">Customer-Id:</label>
+<input type="text" class="form-control mt-1" id="CUST_ID" name="CUST_ID" value="63287432">
+<input type="hidden" class="form-control mt-3" id="CHANNEL_ID" name="CHANNEL_ID" value="WEB">
+<label for="ORDER_ID" class="mt-3">Amount:</label>
+<input type="text" class="form-control mt-1" id="TXN_AMOUNT" name="TXN_AMOUNT" value={{session.cart.totalPrice}}>
+<input type="hidden" class="form-control mt-3" id="WEBSITE" name="WEBSITE" value="WEBSTAGING">
+<input type="hidden" class="form-control mt-3" id="MID" name="MID" value="MMNvsZ85903128490148">
+<input type="hidden" class="form-control mt-3" id="PAYTM_MERCHANT_KEY" name="PAYTM_MERCHANT_KEY"
+value="9S6g3THJk1tN5&4U">
+<input type="submit" class="btn btn-primary mt-4 w-50" value="Pay">
+</form>
+</div>

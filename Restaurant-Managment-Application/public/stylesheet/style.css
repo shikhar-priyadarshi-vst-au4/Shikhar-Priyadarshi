@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+body{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: fit-content;
+}
+nav {
+    height: 100%;
+    box-shadow: 1px 1px 1px 1px #101f2b4d;
+    font-family: 'Fjalla One', sans-serif !important;
+}
+.img-fix{
+    background-image: url("./../images/black-fork-and-knife-clip-art-940302.jpg");
+    background-size: 108%;
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+}
+#logo {
+    margin: 0px 10px 0px 10px;
+    width: 50px;
+    height: 50px;
+}
+.quote{
+    font-family: 'Fjalla One', sans-serif !important;
+    position: relative;
+    width: 200px;
+    display: inline-block;
+    font-weight: 200;
+    top: 30px;
+    left: 18%;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.1rem;
+}
+
+@media (min-width:1025px){
+    .quote{
+        font-family: 'Fjalla One', sans-serif !important;
+        position: relative;
+        width: 300px;
+        display: inline-block;
+        font-weight: 200;
+        top: 30px;
+        left: 30%;
+        font-size: 20px;
+        color: #FFFFFF;
+        letter-spacing: 0.1rem;
+    }
+    
+    
+
+}
+
+
+
+@media (min-width:1025px){
+    .bg_img{
+        position: relative;
+        top: 10%;
+        left:18%;
+    }
+    
+
+}
+@media (max-width:1024px){
+    .bg_img{
+        position: relative;
+        top: 10%;
+        left: 1%;
+    }
+
+}
+.bg_img:hover{
+    cursor: pointer;
+    background-color: #FFFFFF !important;
+}
+.display-1{
+    font-family: 'Fjalla One', sans-serif !important;
+}
+.image{
+    position:relative; 
+    display: inline-block;
+        
+}
+.background-image {
+    width: 1080px;
+
+}
+a { font-weight: 500;
+    color: #FFFFFF !important;
+    margin-right: 22px !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+}
+
+a:hover {
+    background-color:  #FFFFFF !important;
+    color:  #fcb00bfd !important;
+}
+
+#footer {
+    background-color: #fcb00bfd;
+    padding: 20px 20px 20px 20px;
+    color: white;
+    position: relative;
+    height: 100%;
+}
+.admin, .logout, .login{
+    color: #FFFFFF;
+}
+#footer-block1 {
+    display: inline-block;
+    width: 40%;
+    margin: 10px 20px 10px 10px;
+}
+
+#footer-block2 {
+    display: inline-block;
+    width: 20%;
+    margin: 10px 20px 0px 20px;
+}
+
+#footer-block3 {
+    display: inline-block;
+    width: 30%;
+    margin: 15px 20px 0px 20px;
+}
+
+#about {
+    background-image: url('./../images/food7.jpg');
+    padding: 180px 80px 180px 80px;
+}
+
+#about-container1 {
+    background-color: #101f2b;
+    border-radius: 10px;
+    border: 5px solid #fcb00bfd;
+    color: white;
+    padding: 80px 80px 80px 80px;
+    text-align: center;
+
+}
+
+#homepage {
+    background-color: #a5cdee;
+}
+
+#dropdown {
+    padding: 8px;
+}
+
+.dropdown-toggle {
+    padding: 10px;
+}
+
+li.active > a {
+    text-decoration: underline;
+     background-color: #999;
+    color: #FFFFFF;
+}
+.contain{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card_1, .card_2 , .card_3{
+    width: 100%;
+    background-color: #ffc207cc;
+    border: 0.5px solid transparent;
+}
+@media (min-width:900px){
+
+    .item{
+        margin:0 auto;
+        width: 50%;
+        border: 0.5px solid;
+        border-color: transparent;
+        border-radius: 3.5%;
+        text-align: center;
+        box-shadow:1px 1px 1px 1px #101f2bd6;
+        color: mintcream;
+        cursor: pointer;
+    }
+    
+}
+.wine{
+    font-family: 'Fjalla One', sans-serif !important;
+}
+@media (max-width:900px){
+
+    .item{
+        margin:0 auto;
+        width: 80%;
+        border: 0.5px solid;
+        border-color: transparent;
+        border-radius: 3.5%;
+        text-align: center;
+        box-shadow:1px 1px 1px 1px #101f2bd6;
+        color: mintcream;
+        cursor: pointer;
+    }
+    
+}
